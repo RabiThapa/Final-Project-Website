@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="css/ordernow.css">
+    
+</head>
+<body>
+    <div class="container">
+        <form action=""  onsubmit="sendEmail(); reset(); return false;">
+            <h3>Order Now</h3>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <input type="email" id="email" placeholder="Email ID" required>
+            <input type="text" id="phone" placeholder="phonenumber" required>
+            <textarea id="fooditem"  row="4" placeholder="Enter the Food Name:"></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "thaparabi8848@gmail.com",
+                Password : "equation0703",
+                To : 'thaparabi8848@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Food Order",
+                Body : "Name: "+ document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone No: " + document.getElementById("phone").value
+                + "<br> Food Order: " + document.getElementById("fooditem").value
+            }).then(
+            message => alert("Message Sent Successfully")
+            );
+
+        }
+    </script>
+</body>
+</html>

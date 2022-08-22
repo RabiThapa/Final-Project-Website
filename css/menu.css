@@ -1,0 +1,40 @@
+.container{
+    border: 4px solid black;
+    background-color: rgb(121, 159, 183);
+    margin: 30px;
+    height: 3000px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.box{
+
+    border: 3px solid rgb(137, 40, 40);
+    border-radius: 10px;
+    width: 270px;
+    height: 200px;
+    margin: 5px;
+    padding: 20px;
+
+}
+#box1{
+    position:fixed;
+    right: 40px;
+    top: 90px;
+
+}
+
+
+table,td{
+    border: 2px solid rgb(69, 69, 115)
+
+}
+
+.content img{
+    display:block;
+    margin: auto;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+
+}
